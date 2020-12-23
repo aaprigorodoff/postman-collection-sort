@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "4474a3a1-c3e1-484c-82a1-5d16bba0c6a3",
+    "name": "Leadex Systems",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Bank Al Etihad",
+      "item": [
+        {
+          "name": "Zzzzzz",
+          "item": [
+            {
+              "name": "b",
+              "request": {}
+            },
+            {
+              "name": "a",
+              "request": {}
+            },
+            {
+              "name": "d",
+              "request": {}
+            }
+          ],
+          "protocolProfileBehavior": {},
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "AAAAA",
+          "item": [
+            {
+              "name": "XXXXX",
+              "item": [
+                {
+                  "name": "ddd",
+                  "request": {}
+                },
+                {
+                  "name": "aaa",
+                  "request": {}
+                }
+              ]
+            },
+            {
+              "name": "CCCCCC",
+              "item": [
+                {
+                  "name": "ddd",
+                  "request": {}
+                },
+                {
+                  "name": "aaa",
+                  "request": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

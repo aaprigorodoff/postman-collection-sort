@@ -1,0 +1,2843 @@
+{
+	"info": {
+		"_postman_id": "4474a3a1-c3e1-484c-82a1-5d16bba0c6a3",
+		"name": "Leadex Systems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bank Al Etihad",
+			"item": [
+				{
+					"name": "ebank-api",
+					"item": [
+						{
+							"name": "Health",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/health",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ExternalId\": \"BPMBP\",\n  \"ExternalReference\": \"reference\",\n  \"CustomerId\": \"001000676\",\n  \"PrepaidCardNumber\": \"4648130447702635\",\n  \"PaymentDetails\": {\n    \"AccountNumber\": \"0010100067615101\",\n    \"Amount\": 100.5,\n    \"Currency\": \"JOD\",\n    \"ReloadChargeAmount\": 100.5\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/prepaidCard/reload",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"prepaidCard",
+										"reload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://{{host}}/api/1.6/accounts/0011615180715102/list?purpose=QUERY_ALL",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"accounts",
+										"0011615180715102",
+										"list"
+									],
+									"query": [
+										{
+											"key": "purpose",
+											"value": "QUERY_ALL"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accounts Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://{{host}}/api/1.6/accounts/0010115180715101/list",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"accounts",
+										"0010115180715101",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customer/cards/",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+									},
+									{
+										"key": "cache-control",
+										"value": "no-cache"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "postman-token",
+										"value": "7a906110-9e49-97e7-bd60-1e72435de971"
+									},
+									{
+										"key": "clientId",
+										"type": "text",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"ExternalID\": \"PNGW9857711\",\n   \"CustomerNumber\": \"001151807\",\n   \"CardNumberTrailer\": \"0033\",\n   \"PaymentDetails\": {\n     \"AccountNumber\": \"027470020\"\n   },\n   \"PaymentChargeAmount\": 0,\n   \"Transaction\": {\n     \"Amount\": 700,\n     \"CurrencyCode\": \"JOD\"\n   }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/customers/cards/v2?cif=001000639&language=English",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"customers",
+										"cards",
+										"v2"
+									],
+									"query": [
+										{
+											"key": "cif",
+											"value": "001000639"
+										},
+										{
+											"key": "language",
+											"value": "English"
+										}
+									]
+								},
+								"description": "http://localhost:8084/api/1.6/creditCards/payments?paymentType=Account"
+							},
+							"response": []
+						},
+						{
+							"name": "(CORE) ADD NEW ACC TO EXISTING CIF ",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"CIF\":\"001162474\",\"AccountTypeCode\":\"3101\",\"Currency\":\"JOD\",\"NoCreditAllowed\":\"N\",\"NoDebitAllowed\":\"N\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/accounts/eChannels?source=BPMKYC",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"accounts",
+										"eChannels"
+									],
+									"query": [
+										{
+											"key": "source",
+											"value": "BPMKYC"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "credit-cards-api",
+					"item": [
+						{
+							"name": "Get Prepaid Cards",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+									},
+									{
+										"key": "cache-control",
+										"value": "no-cache"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "postman-token",
+										"value": "7a906110-9e49-97e7-bd60-1e72435de971"
+									},
+									{
+										"key": "clientId",
+										"type": "text",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"ExternalID\": \"PNGW9857711\",\n   \"CustomerNumber\": \"001151807\",\n   \"CardNumberTrailer\": \"0033\",\n   \"PaymentDetails\": {\n     \"AccountNumber\": \"027470020\"\n   },\n   \"PaymentChargeAmount\": 0,\n   \"Transaction\": {\n     \"Amount\": 700,\n     \"CurrencyCode\": \"JOD\"\n   }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/prepaidCard?customerNumber=001000639&cardType=M&maskPAN=Y",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"prepaidCard"
+									],
+									"query": [
+										{
+											"key": "customerNumber",
+											"value": "001000639"
+										},
+										{
+											"key": "cardType",
+											"value": "M"
+										},
+										{
+											"key": "maskPAN",
+											"value": "Y"
+										}
+									]
+								},
+								"description": "http://localhost:8084/api/1.6/creditCards/payments?paymentType=Account"
+							},
+							"response": []
+						},
+						{
+							"name": "Get credit cards",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+									},
+									{
+										"key": "cache-control",
+										"value": "no-cache"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "postman-token",
+										"value": "7a906110-9e49-97e7-bd60-1e72435de971"
+									},
+									{
+										"key": "clientId",
+										"type": "text",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"ExternalID\": \"PNGW9857711\",\n   \"CustomerNumber\": \"001151807\",\n   \"CardNumberTrailer\": \"0033\",\n   \"PaymentDetails\": {\n     \"AccountNumber\": \"027470020\"\n   },\n   \"PaymentChargeAmount\": 0,\n   \"Transaction\": {\n     \"Amount\": 700,\n     \"CurrencyCode\": \"JOD\"\n   }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/details?customerNumber=001000639&cardType=M&maskPAN=Y",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"details"
+									],
+									"query": [
+										{
+											"key": "customerNumber",
+											"value": "001000639"
+										},
+										{
+											"key": "cardType",
+											"value": "M"
+										},
+										{
+											"key": "maskPAN",
+											"value": "Y"
+										}
+									]
+								},
+								"description": "http://localhost:8084/api/1.6/creditCards/payments?paymentType=Account"
+							},
+							"response": []
+						},
+						{
+							"name": "debitcards/card/extradata (debit-cards-api + oracle)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+									},
+									{
+										"key": "cache-control",
+										"value": "no-cache"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "postman-token",
+										"value": "7a906110-9e49-97e7-bd60-1e72435de971"
+									},
+									{
+										"key": "clientId",
+										"type": "text",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"ExternalID\": \"PNGW9857711\",\n   \"CustomerNumber\": \"001151807\",\n   \"CardNumberTrailer\": \"0033\",\n   \"PaymentDetails\": {\n     \"AccountNumber\": \"027470020\"\n   },\n   \"PaymentChargeAmount\": 0,\n   \"Transaction\": {\n     \"Amount\": 700,\n     \"CurrencyCode\": \"JOD\"\n   }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/debitCards/card/extraData?cif=001000639&language=English",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"debitCards",
+										"card",
+										"extraData"
+									],
+									"query": [
+										{
+											"key": "cif",
+											"value": "001000639"
+										},
+										{
+											"key": "language",
+											"value": "English"
+										}
+									]
+								},
+								"description": "http://localhost:8084/api/1.6/creditCards/payments?paymentType=Account"
+							},
+							"response": []
+						},
+						{
+							"name": "1910 2410 creditCards",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+									},
+									{
+										"key": "cache-control",
+										"value": "no-cache"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									},
+									{
+										"key": "postman-token",
+										"value": "7a906110-9e49-97e7-bd60-1e72435de971"
+									},
+									{
+										"key": "clientId",
+										"type": "text",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ExternalID\": \"001000639\",\n  \"UserId\": \"MULEMKR\",\n  \"ExternalReference\": \"reference\",\n  \"CustomerNumber\": \"001000639\",\n  \"CardNumberTrailer\": \"0651\",\n  \"Transaction\": {\n    \"Amount\": 100.5,\n    \"CurrencyCode\": \"JOD\"\n  },\n  \"PaymentChargeAmount\": 100.50\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/payments?paymentType=Cash",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"payments"
+									],
+									"query": [
+										{
+											"key": "paymentType",
+											"value": "Cash"
+										}
+									]
+								},
+								"description": "http://localhost:8084/api/1.6/creditCards/payments?paymentType=Account"
+							},
+							"response": []
+						},
+						{
+							"name": "1910 2410 reload prepaid",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Dpegc28g479TYxkJKTNwxmez",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ExternalId\": \"APPSIOS\",\n  \"ExternalReference\": \"reference\",\n  \"CustomerId\": \"001000676\",\n  \"PrepaidCardNumber\": \"4648130495231792\",\n  \"PaymentDetails\": {\n    \"Amount\": 100.5,\n    \"Currency\": \"JOD\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}/api/1.6/creditCards/prepaidCard/reload?paymentType=Cash",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"creditCards",
+										"prepaidCard",
+										"reload"
+									],
+									"query": [
+										{
+											"key": "paymentType",
+											"value": "Cash"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "IPS",
+					"item": [
+						{
+							"name": "Developers API",
+							"item": [
+								{
+									"name": "oracle-regAccount",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.oracle.reg.customer.account",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.oracle.reg.customer.account"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Account Registration (process)",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.registration.customer.account",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.registration.customer.account"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IPS-modify customer",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"id\": \"932\"\n\t},\n\t\"Payload\": {\n  \"birthday\": \"2020-02-02 00:00:00\",\n  \"placeOfBirth\": \" Country,City \",\n  \"address\": {\n    \"country\": \"EN\",\n    \"city\": \"CityName\",\n    \"stateProvinceRegion\": \"Region Name\",\n    \"address\": \" street, building No. \"\n  },\n  \"documentValidityDate\": \"2020-02-02 00:00:00\",\n  \"gender\": \"MALE\",\n  \"nickName\": \"N* Surname\",\n  \"additionalDetails\": {\n    \"customerType\": \"Individual\",\n    \"engName\": {\n      \"enSName\": \"Second Name\",\n      \"enTName\": \"Third Name\"\n    },\n    \"arName\": {\n      \"arFName\": \"سامي\",\n      \"arSName\": \"سامي\",\n      \"arTName\": \"سامي\",\n      \"arLName\": \"سامي\"\n    }\n  },\n  \"recordId\": \"CAIKAg8CDAI\",\n  \"uid\": {\n    \"type\": \"NID\",\n    \"value\": \"1234567890\"\n  },\n  \"additionalDetailsPrivate\": {\n    \"nationality\": \"EN\",\n    \"opendate\": \"2020-02-02 00:00:00\"\n  },\n  \"surname\": \"English Surname\",\n  \"name\": \"First English Name\",\n  \"resident\": true,\n  \"status\": \"active\"\n}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.system.modify.customer",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.system.modify.customer"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "oracle-regAccountSaveInfo",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {\n\t\t\"CustomerNumber\": \"001000676\",\n\t\t\"RecordId\": \"81\",\n\t\t\"Id\": \"JO47UBSI1010000010100067615101\",\n\t\t\"OpeningDate\": \"2015-02-15 21:02:44\",\n\t\t\"Currency\": \"JOD\",\n\t\t\"AccountDefault\": \"\",\n\t\t\"Links\": {\n\t\t\t\"Self\": \"\\\"href\\\": \\\"/accounts/81\\\"\",\n\t\t\t\"Update\": \"\\\"href\\\": \\\"/accounts/81\\\"\",\n\t\t\t\"Delete\": \"\\\"href\\\": \\\"/accounts/81\\\"\",\n\t\t\t\"Aliases\": \"\\\"href\\\": \\\"/accounts/81/aliases\\\"\",\n\t\t\t\"UpdateDetails\": \"\\\"href\\\": \\\"/accounts/81/details\\\"\",\n\t\t\t\"LinkAccountToAlias\": \"\\\"href\\\": \\\"/accounts/81/aliases\\\"\"\n\t\t},\n\t\t\"CreationDate\": \"2020-03-18 21:02:44\"\n\t}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.oracle.save.customer.account.record",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.oracle.save.customer.account.record"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "oracle-generate pacs 002",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {\n\t\t\"cif\": \"01321265455\",\n\t\t\"senderBic\": \"UBSIJOA0\",\n\t\t\"senderIban\": \"01321265459\",\n\t\t\"receiverBic\": \"56545JO\",\n\t\t\"receiverIban\": \"15656232\",\n\t\t\"receiverName\": \"Ivan Rybnikov\",\n\t\t\"receiverAddress\": \"sample address\",\n\t\t\"messageId\": \"65465462132132\",\n\t\t\"paymentAmount\": 420.69,\n\t\t\"feeAmount\": 0.00,\n\t\t\"currency\": \"JOD\",\n\t\t\"orgMessageId\": \"ZXSKJS321654\"\n\t}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.oracle.payment.generate.pacs.002",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.oracle.payment.generate.pacs.002"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "oracle-generate camt009",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {\n\t\t\"cif\": null,\n\t\t\"senderBic\": \"0123456789\",\n\t\t\"senderIban\": \"0123456789\",\n\t\t\"receiverBic\": null,\n\t\t\"messageId\": \"9999999999\"\n\t}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.oracle.limits.generate.camt.009",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.oracle.limits.generate.camt.009"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "oracle-generate camt018",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t\t\"cif\": \"001000888\",\n\t\t\"accountNumber\": \"0010100088815104\"\n\t},\n\t\"Payload\": {\n\t\t\"cif\": null,\n\t\t\"senderBic\": \"0123456789\",\n\t\t\"senderIban\": \"0123456789\",\n\t\t\"receiverBic\": null,\n\t\t\"messageId\": \"9999999999\"\n\t}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.oracle.business.day.generate.camt.018",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.oracle.business.day.generate.camt.018"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "flexcube - create IPS transaction",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"InboundProperties\": {\n\t},\n\t\"Payload\": {\n  \"RTTransaction\": {\n    \"USERID\": \"MULEMKR\",\n    \"ExternalReference\": null,\n    \"ReferenceNumber\": null,\n    \"EventSequenceNumber\": null,\n    \"ProductCode\": \"IPSI\",\n    \"Branch\": \"399\",\n    \"Module\": \"RT\",\n    \"MainBranch\": \"399\",\n    \"MainAccountNumber\": null,\n    \"TransactionCurrency\": \"JOD\",\n    \"TransactionAmount\": 5000,\n    \"TransactionCode\": null,\n    \"OffsetBranch\": \"001\",\n    \"OffsetAccount\": \"0010100067615101\",\n    \"OffsetCurrency\": \"JOD\",\n    \"OffsetAmount\": null,\n    \"OffsetTransaction\": null,\n    \"OffsetTransactionCode\": null,\n    \"OffsetExchangeRate\": null,\n    \"LocalAmount\": null,\n    \"LocalCurrencyAmount\": null,\n    \"TransactionDate\": \"2020-04-08\",\n    \"ValueDate\": null,\n    \"RelatedCustomer\": null,\n    \"TotalChargeAmount\": 0,\n    \"Narrative\": \"Instant payments\",\n    \"RemittanceAccount\": null,\n    \"LocalExchangeRate\": null,\n    \"MakerID\": \"MULEMKR\",\n    \"MakerTimestamp\": \"\",\n    \"CheckerID\": \"MULEMKR\",\n    \"CheckerTimestamp\": \"\",\n    \"ModificationNumber\": 1,\n    \"RecordStatus\": null,\n    \"AuthorizationStatus\": \"A\",\n    \"SourceCode\": \"BPMFT\",\n    \"DebitLeg\": null,\n    \"BatchNumber\": null,\n    \"TransactionFlag\": null,\n    \"BookingDate\": \"2020-04-08\",\n    \"OffsetLocalAmount\": null,\n    \"CurrencyCode\": null,\n    \"Amount\": 5000\n  }\n}\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=transaction.rt.create.transaction.receiver",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "transaction.rt.create.transaction.receiver"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "flexcube - create IPS transaction Copy",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"MessageId\": \"JHGJHG232343\",\n  \"MessageName\": \"pacs001.001.08\",\n  \"Amount\": \"100\",\n  \"Currency\": \"JOD\",\n  \"orgMessageId\": \"gasjhdgasjhd\",\n  \"Debitor\": {\n    \"Name\": \"Muhamed Eshbeata\",\n    \"AddressLine1\": \"Jordan, Ammann, Central st.,21\",\n    \"Type\": \"iban\",\n    \"Account\": \"JOUBSIXXXX99000083901\",\n    \"BankBicCode\": \"UBSIJOAX\"\n  },\n  \"Creditor\": {\n    \"Name\": \"Muhamed Al Faradu\",\n    \"AddressLine1\": \"Jordan, Ammann, Central st.,21\",\n    \"Type\": \"iban\",\n    \"Account\": \"00199000083901\",\n    \"BankBicCode\": \"UBSIJOAX\"\n  }\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/developer/general?vm=ips.payments.credit.request",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"developer",
+												"general"
+											],
+											"query": [
+												{
+													"key": "vm",
+													"value": "ips.payments.credit.request"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"auth": {
+								"type": "basic",
+								"basic": [
+									{
+										"key": "password",
+										"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+										"type": "string"
+									},
+									{
+										"key": "username",
+										"value": "Dpegc28g479TYxkJKTNwxmez",
+										"type": "string"
+									}
+								]
+							},
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "8b437e2b-d1dc-48ea-aa9e-88fb3351687d",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "f846c345-6630-4c3a-b8c7-e961a587fa44",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Full API flow",
+							"item": [
+								{
+									"name": "CAS",
+									"item": [
+										{
+											"name": "Registrate customer",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"cif\": \"001006689\",\n\t\"source\": \"TEST\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/individual",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"individual"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Modify customer (suspend)",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"documentValidityDate\": \"2020-02-02 00:00:00\",\n  \"resident\": true,\n  \"name\": \"First English Name\",\n  \"surname\": \"English Surname\",\n  \"nickName\": \"N* Surname\",\n  \"gender\": \"MALE\",\n  \"birthday\": \"2020-02-02 00:00:00\",\n  \"placeOfBirth\": \" Country,City \",\n  \"address\": {\n    \"country\": \"RU\",\n    \"city\": \"CityName\",\n    \"stateProvinceRegion\": \"Region Name\",\n    \"address\": \" street, building No. \"\n  },\n  \"additionalDetailsPrivate\": {\n    \"nationality\": \"ISO Alpha-2\",\n    \"opendate\": \"2020-02-02 00:00:00\"\n  },\n  \"additionalDetails\": {\n    \"customerType\": \"Individual\",\n    \"engName\": {\n      \"enSName\": \"Second Name\",\n      \"enTName\": \"Third Name\"\n    },\n    \"arName\": {\n      \"arFName\": \"سامي\",\n      \"arSName\": \"سامي\",\n      \"arTName\": \"سامي\",\n      \"arLName\": \"سامي\"\n    }\n  },\n  \"status\": \"suspend\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/002163790",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"002163790"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Modify customer (active)",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"documentValidityDate\": \"2020-02-02 00:00:00\",\n  \"resident\": false,\n  \"name\": \"PAaaa\",\n  \"surname\": \"Xxx\",\n  \"gender\": \"MALE\",\n  \"birthday\": \"1900-02-02 00:00:00\",\n  \"placeOfBirth\": \" russia, msk \",\n  \"address\": {\n    \"country\": \"RUasd\",\n    \"city\": \"buda\",\n    \"stateProvinceRegion\": \"moscow Region\",\n    \"address\": \" klim street, building No. 20 \"\n  },\n  \"additionalDetailsPrivate\": {\n    \"nationality\": \"ISO Alpha-2\",\n    \"opendate\": \"2020-01-01 00:00:00\"\n  },\n  \"additionalDetails\": {\n    \"customerType\": \"Individual\",\n    \"engName\": {\n      \"enSName\": \"No\",\n      \"enTName\": \"NO\"\n    },\n    \"arName\": {\n      \"arFName\": \"سامي\",\n      \"arSName\": \"سامي\",\n      \"arTName\": \"سامي\",\n      \"arLName\": \"سامي\"\n    }\n  },\n  \"status\": \"active\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/002163790",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"002163790"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Registrate account",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"cif\": \"001162474\",\n\t\"accountNumber\": \"0010116247415101\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/account",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"account"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Registrate alias",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\"cif\": \"001043925\",\t\n\"type\": \"MOBL\",\n\"value\": \"+994515000000\",\n\"startDate\": \"2017-10-11\",\n\"expirationDate\": \"2020-10-11\",\n\"status\": \"active\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/alias",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"alias"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Get IPS customer info",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/001004144",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"001004144"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Register new alias",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"cif\": \"001000140\",\n    \"alias\": {       \n        \"type\": \"ALIAS\",\n        \"value\": \"aap01\"\n    },\n    \"makeAccountDefault\": true,\n    \"accountNumber\": \"0010100014020501\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/aliasWithAccount",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"aliasWithAccount"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Update alias",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\t\n  \"defaultAccount\": \"JO43UBSI1010000010100414415102\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/001004144/alias/AAP24UP",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"001004144",
+														"alias",
+														"AAP24UP"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Register Customer",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic NGM5MWY1YzhiODNlNDc0M2I5ZDY5NmEyMDc5OTY3ODY6OTgzNmI4NzY1ODRFNDhlYTlmZDgyMDkxODhBMzI0Yzc="
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"cif\": \"001162474\",\n  \"source\": \"TEST\"\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/individual",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"individual"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Enroll account",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic "
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"cif\": \"001000398\",\n    \"alias\": {       \n        \"type\": \"ALIAS\",\n        \"value\": \"aap56\"\n    },\n    \"accountNumber\": \"0010100039815102\",\n    \"makeAccountDefault\": true\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/register/enrollAccount",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"register",
+														"enrollAccount"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Get payee info by alias",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/account/payeeInfoByAlias?aliasType=MOBL&aliasValue=009629333038",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"account",
+														"payeeInfoByAlias"
+													],
+													"query": [
+														{
+															"key": "aliasType",
+															"value": "MOBL"
+														},
+														{
+															"key": "aliasValue",
+															"value": "009629333038"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET customer info",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic NGM5MWY1YzhiODNlNDc0M2I5ZDY5NmEyMDc5OTY3ODY6OTgzNmI4NzY1ODRFNDhlYTlmZDgyMDkxODhBMzI0Yzc=",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/001166995",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"001166995"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Unlink account from alias",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic NGM5MWY1YzhiODNlNDc0M2I5ZDY5NmEyMDc5OTY3ODY6OTgzNmI4NzY1ODRFNDhlYTlmZDgyMDkxODhBMzI0Yzc="
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/customer/001166995/alias/CAT225438/account/4324",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"customer",
+														"001166995",
+														"alias",
+														"CAT225438",
+														"account",
+														"4324"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Queries",
+									"item": [
+										{
+											"name": "Get account Limits",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n \"MsgId\": \"3213212211141\",\n \"MsgNm\": \"camt.009.001.07\",\n \"Type\": \"iban\",\n \"Account\": \"0010116255515102\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/limits/getAccountLimits",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"limits",
+														"getAccountLimits"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Update business day",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{ \n\t\"MsgId\": \"33355556172293\",\n\t\"MsgNm\": \"camt.018.001.05\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/updateBusinessDay",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"updateBusinessDay"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Request Payment Status",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"MsgId\": \"10428099\",\n    \"MsgNm\": \"pacs.028.001.03\",\n    \"SourceMsgId\": \"TESTJOA0AXXX104353844\",\n    \"SourceMsgNm\": \"pacs.008.001.08\",\n    \"SettlementDate\": \"2020-11-03\",\n    \"Debitor\":\n    {\n        \"BankBicCode\": \"TESTJOA0\"\n    },\n    \"Creditor\":\n    {\n        \"BankBicCode\": \"UBSIJOA0\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{host}}/api/1.6/ips/queries/requestPaymentStatus",
+													"protocol": "http",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"queries",
+														"requestPaymentStatus"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Request Payment Status",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic NGM5MWY1YzhiODNlNDc0M2I5ZDY5NmEyMDc5OTY3ODY6OTgzNmI4NzY1ODRFNDhlYTlmZDgyMDkxODhBMzI0Yzc="
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"MsgId\": \"AAPMS443009\",\n  \"MsgNm\": \"pacs.028.001.03\",\n  \"SourceMsgId\": \"AAPTE00018\",\n  \"SourceMsgNm\": \"pacs.008.001.08\",\n  \"SettlementDate\": \"2020-11-30\",\n  \"Debitor\": {\n    \"BankBicCode\": \"UBSIJOA0\"\n  },\n  \"Creditor\": {\n    \"BankBicCode\": \"UBSIJOA0\"\n  }\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/queries/requestPaymentStatus",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"queries",
+														"requestPaymentStatus"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Set account limits",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"MsgId\": \"65476546567\",\n  \"MsgNm\": \"camt.009.001.07\",\n  \"Type\": \"iban\",\n  \"Account\": \"JO90UBSI1010000010116255515102\",\n  \"LimitIdentification\": \"Current\",\n  \"Code\": \"MULT\",\n  \"StartDateTime\": \"2020-02-08 10:10:10\",\n  \"AmountType\": \"AmountWithCurrency\",\n  \"Amount\": 5000,\n  \"Currency\": \"JOD\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{host}}/api/1.6/ips/limits/setAccountLimits",
+													"protocol": "http",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"limits",
+														"setAccountLimits"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Send text message between participants",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"MsgId\": \"AAPMS4030001\",\n  \"MsgNm\": \"camt.998.001.03\",\n  \"BankBicCode\": \"UBSIJOA0AXXX\",\n  \"PrtcTp\": \"Some text\",\n  \"InstnTp\": \"Some text\",\n  \"RlCd\": \"Some text\",\n  \"Impt\": \"INFO\",\n  \"Online\": false,\n  \"All\": false,\n  \"Text\": \"Some text\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/queries/sendText",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"queries",
+														"sendText"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "MS-4032 ips change password",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"MsgId\": \"TE100001\",\n  \"MsgNm\": \"camt.998.001.03\",\n  \"NewPass\": \"newpass\",\n  \"OldPassword\": \"oldpass\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/queries/changePassword",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"queries",
+														"changePassword"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Payments",
+									"item": [
+										{
+											"name": "Return payment",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"MsgId\": \"msg_id\",\n\t\"SourceMsgId\": \"org_msg_id\",\n\t\"SourceMsgNm\": \"org_msg_name\",\n\t\"SourceCreationDateTime\": \"2020-04-30 10:10:10\",\n\t\"ReturnReason\": {\n\t\t\"Code\": \"return_reason_code\",\n\t\t\"Message\": \"return_reason_message\"\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/payments/returnPayment",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"payments",
+														"returnPayment"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Request single credit trransfer QR",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														},
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"Source\": \"BPMFT\",\n  \"AmountBlockNumber\": \"BPMFT-1186522-1\",\n  \"TransactionBranch\": \"001\",\n  \"PayerAccountBranch\": \"001\",\n  \"ExternalReferenceNo\": \"1186522\",\n  \"PurposeCode\": \"11110\",\n  \"MsgId\": \"1186522\",\n  \"MsgNm\": \"pacs.002.001.08\",\n  \"Amount\": 50,\n  \"Currency\": \"JOD\",\n  \"TransactionCurrency\": \"USD\",\n  \"TransactionAmount\": 70.62,\n  \"IpsPaymentAmount\": 50,\n  \"IpsPaymentCurrency\": \"JOD\",\n  \"TransactionFees\": {\n    \"TipOrConvenienceIndicator\": \"01\",\n    \"ValueOfConvenienceFixed\": 10,\n    \"ValueOfPercentageConvenience\": 10\n  },\n  \"Debitor\": {\n    \"CIF\": \"001000140\",\n    \"FirstName\": \"Hamdi\",\n    \"LastName\": \"Kamal\",\n    \"AddressLine1\": \"JORDANnAmmannalrinbo Street, Building 3n\",\n    \"Type\": \"iban\",\n    \"Account\": \"JO70UBSI1010000010200014015101\",\n    \"BankBicCode\": \"UBSIJOA0\"\n  },\n  \"Creditor\": {\n    \"MerchantName\": \"IPS shop\",\n    \"MerchantId\": \"00199000083901\",\n    \"BankBicCode\": \"UBSIJOAX\",\n    \"MerchantCategoryCode\": \"5201\",\n    \"CountryCode\": \"JO\",\n    \"MerchantCity\": \"AMM\",\n    \"Location\": \"fksfsdkfhlsdfh\",\n    \"AdditionalMerchantInfo\": {\n      \"MobileNumber\": \"0796543\",\n      \"StoreLabel\": \"IPS shop\",\n      \"LoyaltyNumber\": \"65465\",\n      \"ReferenceLabel\": \"Some label\",\n      \"CustomerLabel\": \"Some label\",\n      \"TerminalLabel\": \"Some label\"\n    }\n  },\n  \"QRCodeInfo\": {\n    \"InitiationMethod\": \"DYN\",\n    \"SwitchGuid\": \"JOIPS\",\n    \"DateTime\": \"2019-11-11 13:23:44\",\n    \"BillNumber\": \"6545654123213\",\n    \"VerificationCode\": \"65465488\"\n  },\n  \"Charges\": []\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/payments/sendPayment",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"payments",
+														"sendPayment"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Send RequestToPay",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"MessageId\": \"AAPMS28130123\",\n  \"MessageName\": \"pain.001.001.08\",\n  \"Amount\": \"100\",\n  \"Currency\": \"JOD\",\n  \"orgMessageId\": \"Tttasghcz221\",\n  \"Debitor\": {\n    \"Name\": \"Muhamed Eshbeata\",\n    \"AddressLine1\": \"Jordan, Ammann, Central st.,21\",\n    \"Type\": \"iban\",\n    \"Account\": \"JO70UBSI1010000010200014015101\",\n    \"BankBicCode\": \"UBSIJOAX\"\n  },\n  \"Creditor\": {\n    \"Name\": \"Muhamed Al Faradu\",\n    \"AddressLine1\": \"Jordan, Ammann, Central st.,21\",\n    \"Type\": \"iban\",\n    \"Account\": \"JO70UBSI1010000010200014015101\",\n    \"BankBicCode\": \"UBSIJOAX\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips/payments/sendRequestToPay",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips",
+														"payments",
+														"sendRequestToPay"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Receive single credit transfer (simulation through ips-core app)",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "Dpegc28g479TYxkJKTNwxmez",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "text/xml"
+													},
+													{
+														"key": "SOAPAction",
+														"value": ""
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n   <soap:Body>\n      <ns2:send xmlns:ns2=\"http://integration.gwclient.smallsystems.cma.se/\">\n         <message>\n            <block4><![CDATA[<DataPDU xmlns=\"urn:cma:stp:xsd:stp.1.0\">\n  <Body>\n    <AppHdr xmlns=\"urn:iso:std:iso:20022:tech:xsd:head.001.001.01\">\n      <Fr>\n        <FIId>\n          <FinInstnId>\n            <BICFI>UBSIJOA0</BICFI>\n          </FinInstnId>\n        </FIId>\n      </Fr>\n      <To>\n        <FIId>\n          <FinInstnId>\n            <BICFI>UBSIJOA0</BICFI>\n          </FinInstnId>\n        </FIId>\n      </To>\n      <BizMsgIdr>AIIBJO2XAXXX1802171001004686</BizMsgIdr>\n      <MsgDefIdr>pacs.008.001.08</MsgDefIdr>\n      <BizSvc>ACH</BizSvc>\n      <CreDt>2020-02-27T18:47:04.101Z</CreDt>\n    </AppHdr>\n    <Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08\">\n      <FIToFICstmrCdtTrf>\n        <GrpHdr>\n          <MsgId>AIIBJO2XAXXX18021710010044</MsgId>\n          <CreDtTm>2020-04-28T02:04:42</CreDtTm>\n          <NbOfTxs>1</NbOfTxs>\n          <TtlIntrBkSttlmAmt Ccy=\"JOD\">16.17</TtlIntrBkSttlmAmt>\n          <IntrBkSttlmDt>2020-04-28</IntrBkSttlmDt>\n          <SttlmInf>\n            <SttlmMtd>CLRG</SttlmMtd>\n          </SttlmInf>\n        </GrpHdr>\n        <CdtTrfTxInf>\n          <PmtId>\n            <InstrId>AIIBJO2XAXXX180217100120000004004</InstrId>\n            <EndToEndId>NOTPROVIDED</EndToEndId>\n            <TxId>I-AIIBJO2XAXXX180217100120000004004</TxId>\n          </PmtId>\n          <PmtTpInf>\n            <ClrChanl>RTNS</ClrChanl>\n            <SvcLvl>\n              <Prtry>0100</Prtry>\n            </SvcLvl>\n            <LclInstrm>\n              <Prtry>CSDC</Prtry>\n            </LclInstrm>\n            <CtgyPurp>\n              <Prtry>111</Prtry>\n            </CtgyPurp>\n          </PmtTpInf>\n          <IntrBkSttlmAmt Ccy=\"JOD\">100</IntrBkSttlmAmt>\n          <ChrgBr>SLEV</ChrgBr>\n          <InstgAgt>\n            <FinInstnId>\n              <BICFI>UBSIJOA0</BICFI>\n            </FinInstnId>\n          </InstgAgt>\n          <InstdAgt>\n            <FinInstnId>\n              <BICFI>TESTJOA0</BICFI>\n            </FinInstnId>\n          </InstdAgt>\n          <Dbtr>\n            <Nm>Debtor name</Nm>\n            <PstlAdr>\n              <AdrLine>DEBTOR-ADDRESS DETAILS 2</AdrLine>\n            </PstlAdr>\n          </Dbtr>\n          <DbtrAcct>\n            <Id>\n             <IBAN>5435443543</IBAN>\n            </Id>\n          </DbtrAcct>\n          <DbtrAgt>\n            <FinInstnId>\n              <BICFI>TESTJOA0</BICFI>\n            </FinInstnId>\n          </DbtrAgt>\n          <CdtrAgt>\n            <FinInstnId>\n              <BICFI>UBSIJOA0</BICFI>\n            </FinInstnId>\n          </CdtrAgt>\n          <Cdtr>\n            <Nm>MuhamedAl Faradu</Nm>\n            <PstlAdr>\n              <AdrLine>Jordan, Ammann, Central st.,21</AdrLine>\n            </PstlAdr>\n            <Id>\n              <OrgId>\n                <Othr>\n                  <Id>ZZ94AAAA0010000000000131000357</Id>\n                  <SchmeNm>\n                    <Prtry>MCC</Prtry>\n                  </SchmeNm>\n                </Othr>\n              </OrgId>\n            </Id>\n          </Cdtr>\n          <CdtrAcct>\n            <Id>\n              <IBAN>JO43UBSI1010000010100014015107</IBAN>\n            </Id>\n          </CdtrAcct>\n        </CdtTrfTxInf>\n      </FIToFICstmrCdtTrf>\n    </Document>\n  </Body>\n</DataPDU>]]></block4>\n            <msgCopySrvId />\n            <msgCopySrvInfo />\n            <msgDelNotifRq>N</msgDelNotifRq>\n            <msgFinValidation />\n            <msgFormat>S</msgFormat>\n            <msgNetInputTime>####</msgNetInputTime>\n            <msgNetMir>200416ZYAAJOA0AIPS000107577</msgNetMir>\n            <msgNetOutputDate>2004161127</msgNetOutputDate>\n            <msgPacResult />\n            <msgPde>N</msgPde>\n            <msgPdm>N</msgPdm>\n            <msgPriority>N</msgPriority>\n            <msgReceiver>UBSIJOA0AXXX</msgReceiver>\n            <msgSender>ZYAAJOA0XIPS</msgSender>\n            <msgSequence>004832</msgSequence>\n            <msgSession>####</msgSession>\n            <msgSubFormat>O</msgSubFormat>\n            <msgType>pacs.008.001.08</msgType>\n            <msgUserPriority>####</msgUserPriority>\n            <msgUserReference>S0054/102</msgUserReference>\n            <format>MX</format>\n         </message>\n      </ns2:send>\n   </soap:Body>\n</soap:Envelope>",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "https://dev-api.baelab.net/api/1.6/GWClientSAService/GWClientSAPort",
+													"protocol": "https",
+													"host": [
+														"dev-api",
+														"baelab",
+														"net"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"GWClientSAService",
+														"GWClientSAPort"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "bpm fund transfer IPS",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json; charset=utf-8"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic Njc3NGNlZmNmZjNkNDZlNmJkMGUzZDBiNTZmMWEwOTk6MmI3M0FiZmI3ODJGNEVERWE0RjhlMGM3NDkxNjMyODY="
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"ChargeType\": \"our\",\n  \"AdditionalDetails\": \"\",\n  \"IsRecurring\": false,\n  \"Customer\": {\n    \"Account\": \"0010200014015101\",\n    \"CIF\": \"001000140\"\n  },\n  \"Amount\": 10,\n  \"Currency\": \"jod\",\n  \"StandingInstruction\": {},\n  \"TransferType\": \"Ips\",\n  \"referenceId\": null,\n  \"Beneficiary\": {\n    \"Account\": \"JO72UBSI4400000440115682815101\",\n    \"FirstName\": \"mr szzxww\",\n    \"LastName\": \"fdsfds\",\n    \"Address\": \"fdsfds ff\",\n    \"Bank\": \"UBSIJOA0\",\n    \"Type\": \"individual\",\n    \"Country\": \"\",\n    \"City\": \"\",\n    \"State\": \"\",\n    \"Phone\": \"\"\n  }\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "https://sandbox-api.baelab.net/api/1.6/bpmFundTransfer/fundsTransfer",
+													"protocol": "https",
+													"host": [
+														"sandbox-api",
+														"baelab",
+														"net"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"bpmFundTransfer",
+														"fundsTransfer"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "IPS-CC",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "9836b876584E48ea9fd8209188A324c7",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "4c91f5c8b83e4743b9d696a207996786",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{ \n\t\"MsgId\": \"33355556172293\",\n\t\"MsgNm\": \"camt.018.001.05\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{host}}/api/1.6/ips-cc/payments/12312123/123123123/status",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"ips-cc",
+														"payments",
+														"12312123",
+														"123123123",
+														"status"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Request single credit transfer",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json; charset=utf-8"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic Njc3NGNlZmNmZjNkNDZlNmJkMGUzZDBiNTZmMWEwOTk6MmI3M0FiZmI3ODJGNEVERWE0RjhlMGM3NDkxNjMyODY="
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"ChargeType\": \"our\",\n  \"AdditionalDetails\": \"\",\n  \"IsRecurring\": false,\n  \"Customer\": {\n    \"Account\": \"0010200014015101\",\n    \"CIF\": \"001000140\"\n  },\n  \"Amount\": 10,\n  \"Currency\": \"jod\",\n  \"StandingInstruction\": {},\n  \"TransferType\": \"Ips\",\n  \"referenceId\": null,\n  \"Beneficiary\": {\n    \"Account\": \"JO72UBSI4400000440115682815101\",\n    \"FirstName\": \"mr szzxww\",\n    \"LastName\": \"fdsfds\",\n    \"Address\": \"fdsfds ff\",\n    \"Bank\": \"UBSIJOA0\",\n    \"Type\": \"individual\",\n    \"Country\": \"\",\n    \"City\": \"\",\n    \"State\": \"\",\n    \"Phone\": \"\"\n  }\n}",
+													"options": {
+														"raw": {}
+													}
+												},
+												"url": {
+													"raw": "https://sandbox-api.baelab.net/api/1.6/bpmFundTransfer/fundsTransfer",
+													"protocol": "https",
+													"host": [
+														"sandbox-api",
+														"baelab",
+														"net"
+													],
+													"path": [
+														"api",
+														"1.6",
+														"bpmFundTransfer",
+														"fundsTransfer"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "IPS outgoing payment",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "Dpegc28g479TYxkJKTNwxmez",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Source\": \"BPMFTR\",\n    \"TransactionBranch\": \"001\",\n    \"PayerAccountBranch\": \"001\",\n    \"PurposeCode\": \"11110\",\n    \"MsgId\": \"AAPTE00025\",\n    \"MsgNm\": \"pacs.002.001.08\",\n    \"Amount\": 10,\n    \"Currency\": \"JOD\",\n    \"TransactionCurrency\": \"USD\",\n    \"TransactionAmount\": 14.12,\n    \"IpsPaymentAmount\": 10,\n    \"IpsPaymentCurrency\": \"JOD\",\n    \"TransactionFees\": null,\n    \"Debitor\": {\n        \"CIF\": \"001000140\",\n        \"FirstName\": \"Hamdi\",\n        \"LastName\": \"Kamal\",\n        \"AddressLine1\": \"JORDAN\\nAmman\\nalrinbo Street, Building 3\\n\",\n        \"Type\": \"iban\",\n        \"Account\": \"JO70UBSI1010000010200014015101\",\n        \"BankBicCode\": \"UBSIJOA0\"\n    },\n    \"Creditor\": {\n        \"FirstName\": \"Mr Szzxww\",\n        \"LastName\": \"Fdsfds\",\n        \"AddressLine1\": \"FDSFDS FF\",\n        \"Type\": \"iban\",\n        \"Account\": \"JO56TEST0000000000002509181188\",\n        \"BankBicCode\": \"TESTJOA0\"\n    },\n    \"Charges\": [],\n    \"QRCodeInfo\": null\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/api/1.6/ips/payments/sendPayment",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"ips",
+												"payments",
+												"sendPayment"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"auth": {
+								"type": "basic",
+								"basic": [
+									{
+										"key": "password",
+										"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+										"type": "string"
+									},
+									{
+										"key": "username",
+										"value": "Dpegc28g479TYxkJKTNwxmez",
+										"type": "string"
+									}
+								]
+							},
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e0d59a88-43d4-4ceb-b794-20c0ee1922e8",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "749356ac-a4f1-494e-b119-18a9285b21e3",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Direct IPS requests",
+							"item": [
+								{
+									"name": "IPS System - Registrate Customer",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "PWEvZygTN3un",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "UBSIJOA0AXXX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"uid\": \r\n        {\r\n            \"type\": \"NID\",\r\n            \"value\": \"990107501283\"\r\n        },\r\n    \"documentValidityDate\": \"2030-07-25\",\r\n    \"resident\": true,\r\n    \"name\": \"لولو\",\r\n    \"surname\": \"Surname\",\r\n    \"nickName\": \"N* Surname\",\r\n    \"gender\": \"MALE\",\r\n    \"birthDate\": \"1959-07-25\",\r\n    \"placeOfBirth\": \"CityName, CountryName\",\r\n    \"address\": \r\n        {\r\n            \"country\": \"JO\",\r\n            \"city\": \"CityName\",\r\n            \"stateProvinceRegion\": \"City CityName\",\r\n            \"address\": \"CityName, StreetName\"\r\n        },\r\n    \"additionalDetails\": \r\n        {\r\n            \"field1\": \"value1\",\r\n            \"field2\": \"value2\"\r\n        }\r\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:11443/api/cas/v1.0/customers",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "11443",
+											"path": [
+												"api",
+												"cas",
+												"v1.0",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IPS System - Modify individual customer",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "PWEvZygTN3un",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "UBSIJOA0AXXX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"birthday\": \"2020-02-02 00:00:00\",\r\n  \"placeOfBirth\": \" Country,City \",\r\n  \"address\": {\r\n    \"country\": \"EN\",\r\n    \"city\": \"CityName\",\r\n    \"stateProvinceRegion\": \"Region Name\",\r\n    \"address\": \" street, building No. \"\r\n  },\r\n  \"documentValidityDate\": \"2020-02-02 00:00:00\",\r\n  \"gender\": \"MALE\",\r\n  \"nickName\": \"N* Surname\",\r\n  \"additionalDetails\": {\r\n    \"customerType\": \"Individual\",\r\n    \"engName\": {\r\n      \"enSName\": \"Second Name\",\r\n      \"enTName\": \"Third Name\"\r\n    },\r\n    \"arName\": {\r\n      \"arFName\": \"سامي\",\r\n      \"arSName\": \"سامي\",\r\n      \"arTName\": \"سامي\",\r\n      \"arLName\": \"سامي\"\r\n    }\r\n  },\r\n  \"recordId\": \"CAIKAg8CDAI\",\r\n  \"uid\": {\r\n    \"type\": \"NID\",\r\n    \"value\": \"1234567890\"\r\n  },\r\n  \"additionalDetailsPrivate\": {\r\n    \"nationality\": \"EN\",\r\n    \"opendate\": \"2020-02-02 00:00:00\"\r\n  },\r\n  \"surname\": \"English Surname\",\r\n  \"name\": \"First English Name\",\r\n  \"resident\": true,\r\n  \"status\": \"active\"\r\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:11443/api/cas/v1.0/customers/932",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "11443",
+											"path": [
+												"api",
+												"cas",
+												"v1.0",
+												"customers",
+												"932"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IPS System - Activate Customer",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "PWEvZygTN3un",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "UBSIJOA0AXXX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\"id\": {\"iban\": \"JO00JOPACC00112233\"},\n\"servicer\": {\"bic\": \"UBSIJOA0AXXX\"},\n\"type\": \"DFLT\",\n\"openingDate\": \"2017-10-23\",\n\"closingDate\": \"2022-12-23\",\n\"currency\": \"JOD\"\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:13443/api/cas/v1.0/customers/82/activate",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "13443",
+											"path": [
+												"api",
+												"cas",
+												"v1.0",
+												"customers",
+												"82",
+												"activate"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IPS System - Registrate Acccount",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "PWEvZygTN3un",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "UBSIJOA0AXXX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\"id\": {\"iban\": \"JO00JO0ACC00112237\"},\n\"servicer\": {\"bic\": \"UBSIJOA0AXXX\"},\n\"type\": \"DFLT\",\n\"openingDate\": \"2017-10-23\",\n\"closingDate\": \"2022-12-23\",\n\"currency\": \"JOD\"\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:11443/api/cas/v1.0/customers/82/accounts",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "11443",
+											"path": [
+												"api",
+												"cas",
+												"v1.0",
+												"customers",
+												"82",
+												"accounts"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IPS System - Registrate Alias",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "PWEvZygTN3un",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "UBSIJOA0AXXX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"type\": \"MOBL\",\n  \"value\": \"+994545000000\",\n  \"startDate\": \"2020-03-31\",\n  \"expirationDate\": \"2025-03-31\",\n  \"status\": \"active\"\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:13443/api/cas/v1.0/customers/82/aliases",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "13443",
+											"path": [
+												"api",
+												"cas",
+												"v1.0",
+												"customers",
+												"82",
+												"aliases"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Ips-core",
+							"item": [
+								{
+									"name": "ips-core sendMessage",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "Dpegc28g479TYxkJKTNwxmez",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Content\": \"<?xml version='1.0' encoding='UTF-8'?>\\n<DataPDU xmlns=\\\"urn:cma:stp:xsd:stp.1.0\\\">\\n  <Body>\\n    <AppHdr xmlns=\\\"urn:iso:std:iso:20022:tech:xsd:head.001.001.01\\\">\\n      <Fr>\\n        <FIId>\\n          <FinInstnId>\\n            <BICFI>UBSIJOA0</BICFI>\\n          </FinInstnId>\\n        </FIId>\\n      </Fr>\\n      <To>\\n        <FIId>\\n          <FinInstnId>\\n            <BICFI>ZYAAJOA0IPS</BICFI>\\n          </FinInstnId>\\n        </FIId>\\n      </To>\\n      <BizMsgIdr>444m4m4</BizMsgIdr>\\n      <MsgDefIdr>camt.998.001.03</MsgDefIdr>\\n      <BizSvc>IPS</BizSvc>\\n      <CreDt>2020-09-04T04:09:53.590Z</CreDt>\\n    </AppHdr>\\n    <Document xmlns=\\\"urn:swift:xsd:camt.998.001.03\\\">\\n      <CshMgmtPrtryMsg>\\n        <MsgHdr>\\n          <MsgId>444m4m4</MsgId>\\n          <CreDtTm>2020-09-04T04:09:53.590Z</CreDtTm>\\n        </MsgHdr>\\n        <PrtryData>\\n          <Tp>cma.textMessage.001.01</Tp>\\n          <Data>\\n            <Document xmlns=\\\"urn:cma:xsd:cma.textMessage.001.01\\\">\\n              <TxtMsg>\\n                <Rcvr>\\n                  <PrtcId>\\n                    <BICFI>UBSIJOA0</BICFI>\\n                  </PrtcId>\\n                </Rcvr>\\n                <Sndr>\\n                  <BICFI>UBSIJOA0</BICFI>\\n                </Sndr>\\n                <Online>true</Online>\\n                <Txt>Test text</Txt>\\n              </TxtMsg>\\n            </Document>\\n          </Data>\\n        </PrtryData>\\n      </CshMgmtPrtryMsg>\\n    </Document>\\n  </Body>\\n</DataPDU>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/api/1.6/ips-core/message/send",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"ips-core",
+												"message",
+												"send"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ips-core SOAP incoming",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml"
+											},
+											{
+												"key": "SOAPAction",
+												"value": ""
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic RHBlZ2MyOGc0NzlUWXhrSktUTnd4bWV6OmRYeEtaSkE5Y3RnY2Rna0ZzbUx1QzhaRA=="
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n   <soap:Body>\n      <ns2:send xmlns:ns2=\"http://integration.gwclient.smallsystems.cma.se/\">\n         <message>\n            <block4><![CDATA[<DataPDU xmlns=\"urn:cma:stp:xsd:stp.1.0\">\n    <Body>\n        <AppHdr xmlns=\"urn:iso:std:iso:20022:tech:xsd:head.001.001.01\">\n            <Fr>\n                <FIId>\n                    <FinInstnId>\n                        <BICFI>ZYAAJOA0IPS</BICFI>\n                    </FinInstnId>\n                </FIId>\n            </Fr>\n            <To>\n                <FIId>\n                    <FinInstnId>\n                        <BICFI>UBSIJOA0</BICFI>\n                    </FinInstnId>\n                </FIId>\n            </To>\n            <BizMsgIdr>200831ZYAAJOA0AIPS0001101091</BizMsgIdr>\n            <MsgDefIdr>camt.025.001.05</MsgDefIdr>\n            <BizSvc>IPS</BizSvc>\n            <CreDt>####-08-31T12:45:40Z</CreDt>\n            <Sgntr>\n                <ds:Signature xmlns:ds=\"http://www.w3.org/####/09/xmldsig#\">\n                    <ds:SignedInfo>\n                        <ds:CanonicalizationMethod\n                                Algorithm=\"http://www.w3.org/####/10/xml-exc-c14n#\"></ds:CanonicalizationMethod>\n                        <ds:SignatureMethod Algorithm=\"http://www.w3.org/####/09/xmldsig#rsa-sha1\"></ds:SignatureMethod>\n                        <ds:Reference URI=\"#_6085728e-8d3e-4fe9-a3ca-####a28e21dd\">\n                            <ds:Transforms>\n                                <ds:Transform Algorithm=\"http://www.w3.org/####/10/xml-exc-c14n#\"></ds:Transform>\n                            </ds:Transforms>\n                            <ds:DigestMethod Algorithm=\"http://www.w3.org/####/09/xmldsig#sha1\"></ds:DigestMethod>\n                            <ds:DigestValue>APG453IkgqBKFr64TYrB6Y4sQlw=</ds:DigestValue>\n                        </ds:Reference>\n                        <ds:Reference URI=\"#_####ba6e-a44b-####-8fc7-d1ad####bc8b\"\n                                      Type=\"http://uri.etsi.org/01903/v1.3.2#SignedProperties\">\n                            <ds:Transforms>\n                                <ds:Transform Algorithm=\"http://www.w3.org/####/10/xml-exc-c14n#\"></ds:Transform>\n                            </ds:Transforms>\n                            <ds:DigestMethod Algorithm=\"http://www.w3.org/####/09/xmldsig#sha1\"></ds:DigestMethod>\n                            <ds:DigestValue>YktOxAJnZlE+IskyjxcB/+iTRzU=</ds:DigestValue>\n                        </ds:Reference>\n                        <ds:Reference>\n                            <ds:Transforms>\n                                <ds:Transform Algorithm=\"http://www.w3.org/####/10/xml-exc-c14n#\"></ds:Transform>\n                            </ds:Transforms>\n                            <ds:DigestMethod Algorithm=\"http://www.w3.org/####/09/xmldsig#sha1\"></ds:DigestMethod>\n                            <ds:DigestValue>6bmolfvBDkOjFRiUkkZ7aFjkY5k=</ds:DigestValue>\n                        </ds:Reference>\n                    </ds:SignedInfo>\n                    <ds:SignatureValue>\n                        JD0gIdcExSgNDfb1APJ73zGy/FeNP6ooNREYwnvgXXcGbM/ixoITyLDpwOo+LVASTYCS+790NjP3nyE518Rw6vcEkiDMD/DOiIAqBocqNmgTYiF+GYjIVDwnUCJHB0eUIJ3pJkAzwX8YgiXAmXvBFvUjyQlNwCw3lpb73qrxYEUlbX0iMgMMqRwQJaJdcsCoq9j+FnI9oEWMyoGAkThe5yj7e+1A30ptsPwA2m8ZVnxmxdic6/BYuMcp2BLJDXAMdyMIvBvkra4QzbkXNoQyS0+zqbpCm15GojfOjrjgQf9J97RigfvS2BJb0KyQkoZFP592P9IiT3rh8aoeibbUlQ==\n                    </ds:SignatureValue>\n                    <ds:KeyInfo Id=\"_6085728e-8d3e-4fe9-a3ca-####a28e21dd\">\n                        <ds:X509Data>\n                            <ds:X509IssuerSerial>\n                                <ds:X509IssuerName>CN=JOPACC-ISSUER02-CA,DC=JoPACC,DC=local</ds:X509IssuerName>\n                                <ds:X509SerialNumber>1850961851507145228650078501233280469717483525\n                                </ds:X509SerialNumber>\n                            </ds:X509IssuerSerial>\n                        </ds:X509Data>\n                    </ds:KeyInfo>\n                    <ds:Object>\n                        <xades:QualifyingProperties xmlns:xades=\"http://uri.etsi.org/01903/v1.3.2#\">\n                            <xades:SignedProperties Id=\"_####ba6e-a44b-####-8fc7-d1ad####bc8b\">\n                                <xades:SignedSignatureProperties>\n                                    <xades:SigningTime>####-08-31T12:45:40Z</xades:SigningTime>\n                                </xades:SignedSignatureProperties>\n                            </xades:SignedProperties>\n                        </xades:QualifyingProperties>\n                    </ds:Object>\n                </ds:Signature>\n            </Sgntr>\n            <Rltd>\n                <Fr>\n                    <FIId>\n                        <FinInstnId>\n                            <BICFI>UBSIJOA0</BICFI>\n                        </FinInstnId>\n                    </FIId>\n                </Fr>\n                <To>\n                    <FIId>\n                        <FinInstnId>\n                            <BICFI>CBJOJOAX</BICFI>\n                        </FinInstnId>\n                    </FIId>\n                </To>\n                <BizMsgIdr>BPMFT_TESTJOA0AXXX153553494</BizMsgIdr>\n                <MsgDefIdr>pacs.002.001.10</MsgDefIdr>\n                <BizSvc>IPS</BizSvc>\n                <CreDt>####-08-31T03:08:43Z</CreDt>\n            </Rltd>\n        </AppHdr>\n        <Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:camt.025.001.05\">\n            <Rct>\n                <MsgHdr>\n                    <MsgId>S214966/025</MsgId>\n                    <CreDtTm>####-08-31T15:45:40+####</CreDtTm>\n                    <ReqTp>\n                        <Prtry>\n                            <Id>NRT</Id>\n                        </Prtry>\n                    </ReqTp>\n                </MsgHdr>\n                <RctDtls>\n                    <OrgnlMsgId>\n                        <MsgId>BPMFT_TESTJOA0AXXX153553494</MsgId>\n                        <MsgNmId>pacs.002.001.10</MsgNmId>\n                        <OrgtrNm>TESTJOA0</OrgtrNm>\n                    </OrgnlMsgId>\n                    <ReqHdlg>\n                        <StsCd>ERRC</StsCd>\n                        <Desc>EL41\n                            Instruction already rejected\n                        </Desc>\n                    </ReqHdlg>\n                </RctDtls>\n            </Rct>\n        </Document>\n    </Body>\n</DataPDU>]]></block4>\n            <msgCopySrvId />\n            <msgCopySrvInfo />\n            <msgDelNotifRq>N</msgDelNotifRq>\n            <msgFinValidation />\n            <msgFormat>S</msgFormat>\n            <msgNetInputTime>####</msgNetInputTime>\n            <msgNetMir>200416ZYAAJOA0AIPS0001004832</msgNetMir>\n            <msgNetOutputDate>2004161127</msgNetOutputDate>\n            <msgPacResult />\n            <msgPde>N</msgPde>\n            <msgPdm>N</msgPdm>\n            <msgPriority>N</msgPriority>\n            <msgReceiver>UBSIJOA0AXXX</msgReceiver>\n            <msgSender>ZYAAJOA0XIPS</msgSender>\n            <msgSequence>004832</msgSequence>\n            <msgSession>####</msgSession>\n            <msgSubFormat>O</msgSubFormat>\n            <msgType>camt.025.001.05</msgType>\n            <msgUserPriority>####</msgUserPriority>\n            <msgUserReference>S47697/102</msgUserReference>\n            <format>MX</format>\n         </message>\n      </ns2:send>\n   </soap:Body>\n</soap:Envelope>",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}/api/1.6/GWClientSAService/GWClientSAPort",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"1.6",
+												"GWClientSAService",
+												"GWClientSAPort"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "bills-pull-api",
+					"item": [
+						{
+							"name": "MS-3100 Bill prepaid validation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<MFEP>\n\t<MsgHeader>\n\t\t<TmStp>2018-02-25T16:21:49</TmStp>\n\t\t<GUID>1234567890</GUID>\n\t\t<TrsInf>\n\t\t\t<RcvCode>3</RcvCode>\n\t\t\t<ReqTyp>BILPREPADVALRQ</ReqTyp>\n\t\t</TrsInf>\n\t</MsgHeader>\n\t<MsgBody>\n\t\t<BillingInfo>\n\t\t\t<AcctInfo>\n\t\t\t\t<BillingNo>0010006390651</BillingNo>\n\t\t\t\t<BillerCode>116</BillerCode>\n\t\t\t</AcctInfo>\n\t\t\t<DueAmt>10</DueAmt>\n\t\t\t<ValidationCode>35112</ValidationCode>\n\t\t\t<ServiceTypeDetails>\n\t\t\t\t<ServiceType>Account_Payment</ServiceType>\n\t\t\t</ServiceTypeDetails>\n\t\t</BillingInfo>\n\t</MsgBody>\n\t<MsgFooter>\n\t\t<Security>\n\t\t\t<Signature></Signature>\n\t\t</Security>\n\t</MsgFooter>\n</MFEP>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/1.6/billsPull/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"1.6",
+										"billsPull",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "basic",
+						"basic": [
+							{
+								"key": "password",
+								"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+								"type": "string"
+							},
+							{
+								"key": "username",
+								"value": "Dpegc28g479TYxkJKTNwxmez",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8dfc7212-ac11-48e3-95a4-875f7634812f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e19bed22-0cf4-4bd7-9587-ada60e68dfc5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "MS-2648 ibanking checking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Dpegc28g479TYxkJKTNwxmez",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cardNumber\": \"4299200831231624\",\n  \"cardPin\": \"1111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/1.6/accounts/JO31UBSI1120000020116379015101/details/short",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"1.6",
+								"accounts",
+								"JO31UBSI1120000020116379015101",
+								"details",
+								"short"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MS-3054",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dXxKZJA9ctgcdgkFsmLuC8ZD",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Dpegc28g479TYxkJKTNwxmez",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/ebank-ips-oracle/health",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ebank-ips-oracle",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
